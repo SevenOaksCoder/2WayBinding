@@ -1,0 +1,71 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div id="survey">
+    <div>
+        <label for="c1">checkbox 1</label>
+        <input id="c1" type="radio" name="group" value="1" />
+    </div>
+
+    <div>
+        <label for="c2">checkbox 2</label>
+        <input id="c2" type="radio" name="group" value="2" />
+    </div>
+
+    <div>
+        <label for="c3">checkbox 3</label>
+        <input id="c3" type="radio" name="group" value="3" />
+    </div>
+
+    <div>
+        <label for="c4">checkbox 4</label>
+        <input id="c4" type="radio" name="group" value="4" />
+    </div>
+
+    <div>
+        <label for="c5">checkbox 5</label>
+        <input id="c5" type="radio" name="group" value="5" />
+    </div>
+
+    <div>
+        <label for="c6">checkbox 6</label>
+        <input id="c6" type="radio" name="group" value="6" />
+    </div>
+
+    <div>
+        <label for="c7">checkbox 7</label>
+        <input id="c7" type="radio" name="group" value="7" />
+    </div>
+
+    <div>
+        <label for="c8">checkbox 8</label>
+        <input id="c8" type="radio" name="group" value="8" />
+    </div>
+    
+    <button id="cancel">Cancel</button>
+    <button id="submit" disabled>submit</button>
+</div>
+
+<script>
+    const survey = document.getElementById('survey');
+    survey.onclick = () => 
+    {
+        alert(document.querySelector('input[type="radio"]:checked').value);
+        const checkBoxes = survey.querySelectorAll('input[type="checkbox"]');
+
+        const isSomeChecked = [...checkBoxes].some(item => item.checked);
+        if (isSomeChecked) {
+            document.getElementById('submit').disabled = false;
+        }
+        else{
+            document.getElementById('submit').disabled = true;
+        }
+    }
+</script>
+
+
+
+
+
+
