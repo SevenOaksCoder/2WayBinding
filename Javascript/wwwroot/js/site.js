@@ -1,4 +1,23 @@
-﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
+﻿
+function openAnimate() {
+    let div = this.querySelector('.animate');
+    let divHeight = div.scrollHeight;
+    div.style.setProperty('--max-height', divHeight + 'px');
 
-// Write your JavaScript code.
+    if (div.classList.contains('open')) {
+        div.classList.remove('open');
+    }
+    else {
+        clearAll();
+        div.classList.add('open');
+    }
+}
+
+function clearAll() {
+    let divs = document.querySelectorAll('.animate');
+    divs.forEach(x => {
+        if (x.classList.contains('open')) {
+            x.classList.remove('open');
+        }
+    });
+}

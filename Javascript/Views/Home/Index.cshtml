@@ -51,7 +51,6 @@
     const survey = document.getElementById('survey');
     survey.onclick = () => 
     {
-        alert(document.querySelector('input[type="radio"]:checked').value);
         const checkBoxes = survey.querySelectorAll('input[type="checkbox"]');
 
         const isSomeChecked = [...checkBoxes].some(item => item.checked);

@@ -18,6 +18,16 @@ namespace Javascript.Controllers
             return View();
         }
 
+        public IActionResult Animate()
+        {
+            return View();
+        }
+
+        public IActionResult Accordion()
+        {
+            return View();  
+        }
+
         public IActionResult Privacy()
         {
             return View();

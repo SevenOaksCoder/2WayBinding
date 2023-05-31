@@ -1,0 +1,54 @@
+﻿<div class="container">
+    <div class="trigger">
+        Click me to see a height transition.
+        <div class="animate">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
+    </div>
+</div>
+<div class="container">
+    <div class="trigger">
+        Click me to see a height transition.
+        <div class="animate">Second one - Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</div>
+    </div>
+</div>
+<div class="container">
+    <div class="trigger">
+        Click me to see a height transition.
+        <div class="animate">Third one</div>
+    </div>
+</div>
+<div class="container">
+    <div class="trigger">
+        Click me to see a height transition.
+        <div class="animate">
+            <img width="400" src="~/images/pexels-jeremy-müller-6444367.jpg" />
+        </div>
+    </div>
+</div>
+
+<style>
+    .container{
+        width:50%;
+    }
+
+    .trigger{
+        background-color: #c3c3c3;
+        margin-bottom:5px;
+        cursor:pointer;
+    }
+
+    .animate {
+        background-color: #e3e3e3;
+        max-height: 0;
+        transition: max-height 0.2s linear;
+        overflow: hidden;
+    }
+
+    .open{
+        max-height: var(--max-height);
+    }
+</style>
+
+<script>
+    const triggers = document.querySelectorAll('.trigger');
+    triggers.forEach(x => x.addEventListener('click', openAnimate));
+</script>
